@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .todo-item {
-  min-width: 1000px;
+  width:auto;
   padding: 12px;
   margin-bottom: 10px;
   background-color: #fff;

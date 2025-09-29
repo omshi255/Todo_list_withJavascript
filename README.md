@@ -1,31 +1,37 @@
-MyTodo List
+### MyTodo List
 
 A simple Todo List web application built with HTML, JavaScript, and CSS. This app allows users to add, edit, delete, and mark tasks as done, with tasks persisted in localStorage. Tasks are displayed on a separate page, and the form is pre-filled when editing a task.
 
 ---
 
-Features
+### Features
 
-Add new tasks with title and description
+- Add new tasks with title and description
 
-View all tasks on a separate task page
+- View all tasks on a separate task page
 
-Edit tasks with form pre-filled values
+- Edit tasks with form pre-filled values
 
-Delete tasks
+---
 
-Mark tasks as Done/Undone
+### Delete tasks
 
-Persist tasks using localStorage
+- Mark tasks as Done/Undone
 
-Responsive and user-friendly UI with CSS styling
+- Persist tasks using localStorage
 
-Demo
+- Responsive and user-friendly UI with CSS styling
+
+---
+
+### Demo
 
 You can view your tasks immediately by opening index.html in a browser.
 After adding a task, you’ll be redirected to task.html to see all tasks.
 
-File Structure
+---
+
+### File Structure
 
 ```
 MyTodoList/
@@ -42,8 +48,9 @@ MyTodoList/
 └─ README.md           # Project documentation
 ```
 
+---
 
-Technologies Used
+### Technologies Used
 
 HTML5 – structure of the app
 
@@ -53,28 +60,27 @@ JavaScript (ES6 Modules) – add, edit, delete, render tasks
 
 LocalStorage – persist tasks between sessions
 
-Usage
+---
+
+### Usage
 
 Clone the repository: 
 ```
 git clone https://github.com/yourusername/MyTodoList.git
 ```
 
-Open index.html in your web browser.
+---
 
-Add a task using the form.
+- Open index.html in your web browser.
 
-View tasks on task.html.
+- Add a task using the form.
 
-Edit or delete tasks as needed.
+- View tasks on task.html.
 
-Screenshots
+- Edit or delete tasks as needed.
 
-Add Task Form:
-
-
-Task List Page:
-
+- #### Screenshots
+  
 ```
 **Add Task Form:**  
 ![Add Task](screenshots/addtask.png)
@@ -83,10 +89,11 @@ Task List Page:
 ![Task List](screenshots/tasklist.png)
 
 
-
 ```
 
-Future Improvements
+---
+
+#### Future Improvements
 
 Add due dates and priority levels
 
@@ -95,6 +102,8 @@ Add search and filter functionality
 Integrate with a backend for multi-user support
 
 Add drag-and-drop sorting of tasks
+
+---
 
 License
 

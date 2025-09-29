@@ -66,7 +66,7 @@ LocalStorage – persist tasks between sessions
 
 Clone the repository: 
 ```
-git clone https://github.com/yourusername/MyTodoList.git
+git clone https://github.com/omshi255/Todo_list_withJavascript
 ```
 
 ---

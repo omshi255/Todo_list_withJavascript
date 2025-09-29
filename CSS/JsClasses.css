@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .todo-item {
   min-width: 1000px;
   padding: 12px;
@@ -11,6 +13,18 @@
   align-items: start;
   gap: 6px;
 }
+.due-date {
+  font-size: 14px;
+ font-family: 'Pacifico', cursive;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: inline-block;
+   background: linear-gradient(135deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 
 .todo-title {
   font-size: 18px;

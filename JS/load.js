@@ -3,12 +3,15 @@ import { deleteTodo } from "./delete.js";
 
 const list = document.getElementById("todo-list");
 
-export function renderTodos() {
+export function renderTodos(todosToRender) {
   if (!list) return;
 
   list.innerHTML = "";
 
-  todos.forEach((todo, index) => {
+
+  const displayTodos = Array.isArray(todosToRender) ? todosToRender : todos;
+
+  displayTodos.forEach((todo, index) => {
     const li = document.createElement("li");
     li.className = "todo-item";
 
@@ -23,6 +26,10 @@ export function renderTodos() {
     const dtSpan = document.createElement("span");
     dtSpan.textContent = todo.datetime;
     dtSpan.className = "todo-datetime";
+
+    const dueSpan = document.createElement("span");
+    dueSpan.className = "due-date";
+    dueSpan.textContent = todo.dueDate ? `Due: ${todo.dueDate}` : "No due date";
 
     const doneBtn = document.createElement("button");
     doneBtn.textContent = todo.done ? "Undone" : "Done";
@@ -60,10 +67,28 @@ export function renderTodos() {
     li.appendChild(titleSpan);
     li.appendChild(descSpan);
     li.appendChild(dtSpan);
+    li.appendChild(dueSpan);
     li.appendChild(btnWrapper);
 
     list.appendChild(li);
   });
 }
 
-window.addEventListener("DOMContentLoaded", renderTodos);
+window.addEventListener("DOMContentLoaded", () => {
+  renderTodos();
+
+  const searchInput = document.getElementById("search-input");
+  const searchBtn = document.getElementById("search-btn");
+
+  if (searchInput && searchBtn) {
+    searchBtn.addEventListener("click", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        renderTodos();
+      } else {
+        const filteredTodos = todos.filter(todo => todo.title.toLowerCase().includes(query));
+        renderTodos(filteredTodos);
+      }
+    });
+  }
+});

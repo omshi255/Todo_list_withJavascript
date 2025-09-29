@@ -77,10 +77,12 @@ Task List Page:
 
 ```
 **Add Task Form:**  
-![Add Task](addtask.png)
+![Add Task](screenshots/addtask.png)
 
 **Task List Page:**  
-![Task List](tasklist.png)
+![Task List](screenshots/tasklist.png)
+
+
 ```
 
 Future Improvements

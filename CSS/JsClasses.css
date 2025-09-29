@@ -1,34 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .todo-item {
-  width:auto;
-  padding: 12px;
-  margin-bottom: 10px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  box-sizing: border-box;
 
-  align-items: start;
-  gap: 6px;
+
 }
+
 .due-date {
-  font-size: 14px;
- font-family: 'Pacifico', cursive;
-  padding: 2px 4px;
-  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: 'Pacifico', cursive;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
   display: inline-block;
-   background: linear-gradient(135deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d32f2f;
+  word-break: break-word;
 }
-
-
 
 .todo-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
+  word-break: break-word;
 }
 
 .todo-title.done {
@@ -37,21 +39,24 @@
 }
 
 .todo-desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #333;
+  word-break: break-word;
 }
 
 .todo-datetime {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #888;
 }
 
 .todo-btn {
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 0.75rem;
+  flex: 1;
+  min-width: 60px;
 }
 
 .done-btn {
@@ -83,6 +88,55 @@
 
 .btn-wrapper {
   display: flex;
-  gap: 6px;
-  margin-top: 6px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .todo-item {
+    padding: 0.75rem;
+  }
+
+  .todo-title {
+    font-size: 1rem;
+  }
+
+  .todo-desc {
+    font-size: 0.875rem;
+  }
+
+  .todo-datetime,
+  .due-date {
+    font-size: 0.75rem;
+  }
+
+  .todo-btn {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-item {
+    padding: 0.5rem;
+  }
+
+  .todo-title {
+    font-size: 0.95rem;
+  }
+
+  .todo-desc {
+    font-size: 0.8rem;
+  }
+
+  .todo-datetime,
+  .due-date {
+    font-size: 0.7rem;
+  }
+
+  .todo-btn {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoApp</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./CSS/JsClasses.css">
+</head>
+<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen p-6">
+
+  <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg flex flex-col gap-6">
+    <h1 class="text-3xl font-bold text-gray-800 text-center mb-4">Todo List</h1>
+
+    <form id="todo-form" class="flex flex-col gap-4">
+      <div class="flex flex-col">
+        <label for="todo-title" class="text-gray-700 font-medium mb-1">Task Title</label>
+        <input type="text" id="todo-title" placeholder="Enter task title" required
+          class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="todo-desc" class="text-gray-700 font-medium mb-1">Task Description</label>
+        <textarea id="todo-desc" placeholder="Enter task description" rows="4" required
+          class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition resize-none"></textarea>
+      </div>
+
+      <button type="submit"
+        class="bg-blue-500 text-white font-semibold py-2 rounded-md transition">
+        Add Task
+      </button>
+    </form>
+  </div>
+       
+
+  
+  <script src="./JS/app.js" type="module"></script>
+</body>
+</html>
